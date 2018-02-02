@@ -13,6 +13,6 @@
      "default_popup": "popup.html"
     },
   "permissions": [
-     "activeTab"
+     "activeTab", "cookies", "tabs", "http://*/*", "https://*/*" 
      ]
 }
