@@ -2,12 +2,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var checkPageButton = document.getElementById('checkPage');
   checkPageButton.addEventListener('click', function() {
-    console.log("hrllo")
-  chrome.tabs.getSelected(null, function(tab) {
-    window.alert(tab.url)
+
+//chrome.extension.getBackgroundPage().console.log('foo');
+//  chrome.cookies.getAll({}, function(cookie_arr){
+//    window.alert(cookie_arr.length)
+//    window.alert("hello")
+//    
+//    })
+//
+//
+//  chrome.tabs.getselected(null, function(tab) {
+//    window.alert(tab.url)
+//    })
+//
+
+//    window.alert("asd")
+// window.alert(chrome.cookies.getAll);
+ 
+ 
+
+
+ // replace facebook.com with current tab.
+ chrome.cookies.getAll({domain:'facebook.com'}, function(Cookie){
+    window.alert(Cookie.length)
+  })
+//
+
     })
   })
-})
+
   //  chrome.tabs.getSelected(null, function(tab) {
   //  d = document;
   //  var f = d.createElement('form');
